@@ -3,43 +3,43 @@ body {
   font-family: 'Georgia', serif;
   color: #fff;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient(to bottom right, #1a1a1a, #2c0a17);
 }
 
 .card {
-  background: rgba(255, 192, 203, 0.1); /* soft pink aura */
+  background: rgba(255, 192, 203, 0.1);
   border: 2px solid #ff66a3;
   border-radius: 20px;
-  padding: 30px;
-  width: 420px;
-  text-align: center;
+  padding: 25px;
+  max-width: 420px;
+  width: 100%;
   box-shadow: 0 0 30px #ff66a3;
+  text-align: center;
   transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
   box-shadow: 0 0 50px #ff99cc;
-  transform: scale(1.03);
   background: rgba(255, 192, 203, 0.15);
 }
 
 .avatar {
   background: url('https://api.dicebear.com/7.x/micah/svg?seed=auntylover') no-repeat center/cover;
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   border: 3px solid #ff80bf;
-  margin: 0 auto 20px;
+  margin: 0 auto 15px;
 }
 
 h1 {
   color: #ff80bf;
-  font-size: 26px;
+  font-size: 24px;
   margin-bottom: 10px;
   text-shadow: 1px 1px #40001f;
 }
@@ -48,7 +48,7 @@ h1 {
   color: #ffcce0;
   font-size: 15px;
   font-style: italic;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 ul {
@@ -70,4 +70,32 @@ li {
   color: #f0a3c1;
   border-top: 1px dashed #ff66a3;
   padding-top: 10px;
+}
+
+/* Mobile Responsive Adjustments */
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  ul {
+    font-size: 13px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
 }
