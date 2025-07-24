@@ -1,101 +1,255 @@
-body {
-  background-color: #0b0b0b;
-  font-family: 'Georgia', serif;
-  color: #fff;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-image: linear-gradient(to bottom right, #1a1a1a, #2c0a17);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AVS GitHub Fun Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.card {
-  background: rgba(255, 192, 203, 0.1);
-  border: 2px solid #ff66a3;
-  border-radius: 20px;
-  padding: 25px;
-  max-width: 420px;
-  width: 100%;
-  box-shadow: 0 0 30px #ff66a3;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-}
+  <style>
+    body {
+      background: #121212;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
 
-.card:hover {
-  box-shadow: 0 0 50px #ff99cc;
-  background: rgba(255, 192, 203, 0.15);
-}
+    .github-cta {
+      background: #1f1f1f;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 10px #00000080;
+      max-width: 600px;
+      width: 100%;
+    }
 
-.avatar {
-  background: url('https://api.dicebear.com/7.x/micah/svg?seed=auntylover') no-repeat center/cover;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  border: 3px solid #ff80bf;
-  margin: 0 auto 15px;
-}
+    .saucy-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      object-fit: cover;
+      max-height: 260px;
+    }
 
-h1 {
-  color: #ff80bf;
-  font-size: 24px;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px #40001f;
-}
+    .github-cta img.avatar {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+      border: 2px solid #f5f5f5;
+    }
 
-.subtitle {
-  color: #ffcce0;
-  font-size: 15px;
-  font-style: italic;
-  margin-bottom: 15px;
-}
+    .github-cta p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
 
-ul {
-  list-style-type: '💗 ';
-  text-align: left;
-  padding-left: 0;
-  font-size: 14px;
-}
+    .github-btn {
+      margin: 6px;
+      padding: 10px 16px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s ease;
+      display: inline-block;
+    }
 
-li {
-  margin: 10px 0;
-  line-height: 1.6;
-}
+    .github-btn:hover {
+      background: #555;
+    }
 
-.footer {
-  font-style: italic;
-  margin-top: 20px;
-  font-size: 13px;
-  color: #f0a3c1;
-  border-top: 1px dashed #ff66a3;
-  padding-top: 10px;
-}
+    #copy-status {
+      margin-top: 5px;
+      font-size: 14px;
+      color: lightgreen;
+    }
 
-/* Mobile Responsive Adjustments */
-@media screen and (max-width: 480px) {
-  .card {
-    padding: 20px;
-  }
+    h1 {
+      margin-top: 40px;
+      font-size: 28px;
+      color: #ff69b4;
+      text-align: center;
+    }
 
-  h1 {
-    font-size: 20px;
-  }
+    .subtitle {
+      font-style: italic;
+      color: #aaa;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 16px;
+    }
 
-  .avatar {
-    width: 90px;
-    height: 90px;
-  }
+    ul {
+      list-style-type: '🌟 ';
+      padding-left: 20px;
+      text-align: left;
+      max-width: 600px;
+      width: 100%;
+    }
 
-  ul {
-    font-size: 13px;
-  }
+    ul li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
 
-  .subtitle {
-    font-size: 13px;
-  }
+    #typewriter {
+      font-weight: bold;
+      font-size: 18px;
+      color: #ff6ec7;
+      margin-top: 40px;
+      text-align: center;
+      max-width: 600px;
+      min-height: 30px;
+    }
 
-  .footer {
-    font-size: 12px;
-  }
-}
+    /* Mobile Responsive */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      .github-cta {
+        padding: 20px 15px;
+      }
+
+      .github-cta p {
+        font-size: 16px;
+      }
+
+      .github-btn {
+        width: 90%;
+        margin: 8px 0;
+        font-size: 15px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+      }
+
+      ul li {
+        font-size: 17px;
+        margin:5px;
+        margin-right: 10px;
+        text-align: justify;
+      }
+
+      #typewriter {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="github-cta">
+    <!-- 🔥 Saucy Image -->
+    <img class="saucy-img" src="avs.jpg" alt="Aunty Queen of Hearts">
+
+    <img src="https://avatars.githubusercontent.com/GokulakrishnanSivalingam" alt="AVS GitHub Avatar" class="avatar">
+    <p>💻 Aunty Veriyan Sanjeev on GitHub</p>
+    <a href="https://github.com/GokulakrishnanSivalingam" target="_blank" class="github-btn">⭐ Star Repo</a>
+    <a href="https://github.com/sponsors/GokulakrishnanSivalingam" target="_blank" class="github-btn">☕ Sponsor Me</a>
+    <button class="github-btn" onclick="copyLink()">🔗 Copy GitHub Link</button>
+    <div id="copy-status"></div>
+    <p>✨ Help me reach <span id="star-count">...</span> stars!</p>
+  </div>
+
+  <h1>AUNTY VERIYAN SANJEEV</h1>
+  <p class="subtitle">“Not a flirt… just devoted to divine aunties.”</p>
+
+  <ul>
+    <!-- your existing legendary bullet points kept untouched -->
+    <li>Once ironed her saree… while it was still on her 😳🔥</li>
+    <li>Calls her "amma" in public… but whispers “baby” in his dreams 😈</li>
+    <li>He didn’t choose the aunty life. The aunty life sat next to him in a saree.</li>
+    <li>On her birthday, he made kolam with his own hair 🕯</li>
+    <li>Downloaded Bhajan ringtones… just to imagine her calling</li>
+    <li>Hides under her window just to hear her drying her hair 💦</li>
+    <li>Her cooking video had 14 views. All 14 were him. On repeat. At 2am.</li>
+    <li>Says “Good morning, aunty” with respect… but zooms into her WhatsApp DP at night 😵‍💫</li>
+    <li>Did 108 sit-ups after she said "you’ve put on weight kanna"</li>
+    <li>Once touched the steel tumbler she drank from. Now it’s in a velvet box. 🙏</li>
+    <li>Saw her wiping sweat… wrote a haiku about it 🌡</li>
+    <li>His search history: “Can you fall in love with a married woman respectfully?”</li>
+    <li>Knows every crease in her pallu like it’s the map to salvation</li>
+    <li>Felt jealous of her pressure cooker because she touched it longer 😭</li>
+    <li>Her scolding gave him chest pain. And also... butterflies.</li>
+    <li>Prayed to the same god she prays to — not for moksha, but for *mokka* (coffee with her)</li>
+    <li>His ultimate fantasy? Drinking Boost while she feeds him banana chips 😩💗</li>
+  </ul>
+
+  <!-- 🖋 Typewriter -->
+  <div id="typewriter"></div>
+
+  <script>
+    // GitHub stars
+    fetch("https://api.github.com/users/GokulakrishnanSivalingam/repos")
+      .then(res => res.json())
+      .then(data => {
+        let totalStars = data.reduce((sum, repo) => sum + repo.stargazers_count, 0);
+        document.getElementById("star-count").textContent = totalStars;
+      })
+      .catch(() => {
+        document.getElementById("star-count").textContent = "???";
+      });
+
+    // Copy GitHub link
+    function copyLink() {
+      const githubURL = "https://github.com/GokulakrishnanSivalingam";
+      navigator.clipboard.writeText(githubURL).then(() => {
+        document.getElementById("copy-status").textContent = "✅ Copied to clipboard!";
+        setTimeout(() => {
+          document.getElementById("copy-status").textContent = "";
+        }, 2000);
+      });
+    }
+
+    // Typewriter Effect
+    const quotes = [
+      "She said 'va da mapla' — now it’s my ringtone.",
+      "If love is a crime, then call me 420 for aunty’s affection.",
+      "One sip from her coffee — and I saw my ancestors dance.",
+      "She sneezed. I wrote an epic. 14 chapters.",
+      "She asked 'saptiya?' — I heard 'marry me.'"
+    ];
+
+    let index = 0;
+    let char = 0;
+
+    function type() {
+      if (char < quotes[index].length) {
+        document.getElementById("typewriter").textContent += quotes[index].charAt(char);
+        char++;
+        setTimeout(type, 40);
+      } else {
+        setTimeout(erase, 2000);
+      }
+    }
+
+    function erase() {
+      if (char > 0) {
+        document.getElementById("typewriter").textContent = quotes[index].substring(0, char - 1);
+        char--;
+        setTimeout(erase, 20);
+      } else {
+        index = (index + 1) % quotes.length;
+        setTimeout(type, 1000);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
+
+</body>
+</html>
